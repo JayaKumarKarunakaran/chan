@@ -5,8 +5,14 @@ import numpy as np
 import joblib
 from werkzeug.utils import secure_filename
 
+
 # Initialize Flask app
 app = Flask(__name__)
+
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://user:password@host/db_name'
+
+
 app.config['UPLOAD_FOLDER'] = 'uploads'
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
