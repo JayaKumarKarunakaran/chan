@@ -10,7 +10,6 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://user:password@host/db_name'
 
 
 app.config['UPLOAD_FOLDER'] = 'uploads'
