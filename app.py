@@ -136,14 +136,14 @@ def predict():
     
     <div style="text-align:center; padding:50px; font-family: Arial, sans-serif;">
         <h2 style="color:white;">Predicted Diagnosis: {predicted_label}</h2>
-      
+        <img src="/uploads/{file}" alt="Uploaded Image" style="max-width:300px; border:2px solid #ddd; padding:10px; margin-top:20px;">
         <br><a href="/" style="margin-top:20px; display:inline-block; padding:10px 20px; background-color:#007bff; color:white; text-decoration:none; border-radius:5px;">Go Back</a>
     </div>
     
       </body>
     '''
-    
 
 # ✅ Run Flask app
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000, debug=True)
+
