@@ -8,6 +8,7 @@ from werkzeug.utils import secure_filename
 
 # Initialize Flask app
 app = Flask(__name__)
+
 app.config['UPLOAD_FOLDER'] = 'uploads'
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
