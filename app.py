@@ -41,7 +41,7 @@ def about():
           <a href="/home" style="color: white; text-decoration: none;">Back to Home</a>
           <div style="color:white; width: 100%; background-color: rgba(0, 0, 255, 0.5); padding:0.25em; margin:1em 0;">
                 <ol style="display: flex; justify-content: center; list-style-type: none; padding: 0; gap:2em;">
-                    <li><a href="/home" style="text-decoration:none; color:black">Home</a></li>
+                    <li><a href="/home" style="text-decoration:none; color:white">Home</a></li>
                     <li><a href="/about" style="text-decoration:none; color:black">About Us</a></li>
                 </ol>
             </div>
