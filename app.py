@@ -9,9 +9,6 @@ from werkzeug.utils import secure_filename
 # Initialize Flask app
 app = Flask(__name__)
 
-
-
-
 app.config['UPLOAD_FOLDER'] = 'uploads'
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
@@ -39,10 +36,10 @@ def about():
     </head>
      <body style="background-color: Black; color: white;  align-items: center; background-image: url('https://statnano.com/resource/news/files/images/21/2/thumbnail_98475abde06cc48db710e1b98f130ddc.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 105% 100%;">
           <a href="/home" style="color: white; text-decoration: none;">Back to Home</a>
-          <div style="color:white; width: 100%; background-color: rgba(0, 0, 255, 0.5); padding:0.25em; margin:1em 0;">
+          <div style="color:white; width: 100%; background-color: rgba(0, 0, 155, 0.5); padding:0.25em; margin:1em 0;">
                 <ol style="display: flex; justify-content: center; list-style-type: none; padding: 0; gap:2em;">
                     <li><a href="/home" style="text-decoration:none; color:white">Home</a></li>
-                    <li><a href="/about" style="text-decoration:none; color:black">About Us</a></li>
+                    <li><a href="/about" style="text-decoration:none; color:white">About Us</a></li>
                 </ol>
             </div>
         <center><h1 style="margin: 0.5em;font-size: 3rem; color:white; align-content:center">About Lung Cancer Detection</h1></center>
