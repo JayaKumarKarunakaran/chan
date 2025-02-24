@@ -8,10 +8,6 @@ from werkzeug.utils import secure_filename
 
 # Initialize Flask app
 app = Flask(__name__)
-
-
-
-
 app.config['UPLOAD_FOLDER'] = 'uploads'
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
@@ -39,10 +35,11 @@ def about():
     </head>
      <body style="background-color: Black; color: white;  align-items: center; background-image: url('https://statnano.com/resource/news/files/images/21/2/thumbnail_98475abde06cc48db710e1b98f130ddc.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 105% 100%;">
           <a href="/home" style="color: white; text-decoration: none;">Back to Home</a>
-          <div style="color:white; width: 100%; background-color: rgba(0, 0, 255, 0.5); padding:0.25em; margin:1em 0;">
+          <div style="color:white; width: 100%; background-color: rgba(148, 185, 255, 0.4); padding:0.25em; margin:1em 0;">
                 <ol style="display: flex; justify-content: center; list-style-type: none; padding: 0; gap:2em;">
-                    <li><a href="/home" style="text-decoration:none; color:black">Home</a></li>
-                    <li><a href="/about" style="text-decoration:none; color:black">About Us</a></li>
+                    <li><a href="/home" style="text-decoration:none; color:white">Home</a></li>
+                     <li><a href="/home" style="text-decoration:none; color:white">|</a></li>
+                    <li><a href="/about" style="text-decoration:none; color:white">About Us</a></li>
                 </ol>
             </div>
         <center><h1 style="margin: 0.5em;font-size: 3rem; color:white; align-content:center">About Lung Cancer Detection</h1></center>
@@ -86,20 +83,21 @@ def home():
         <title>Lung Cancer Classification</title>
         <i><center><h1 style="margin: 0.5em;font-size: 3rem ">Lung Cancer Detection Using Machine Learning</h1></center></i>
     </head>
-    <body style="background-color: Black; color: white; margin: 20px; align-items: center; background-image: url('https://statnano.com/resource/news/files/images/21/2/thumbnail_98475abde06cc48db710e1b98f130ddc.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 105% 100%;">
+    <body style="background-color: Black; color: black; margin: 20px; align-items: center; background-image: url('https://i.pinimg.com/736x/75/d1/ab/75d1abe32122ad678cdb9b5e91becc65.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 105% 100%;">
         <center>
-            <div style="color:white; width: 100%; background-color: rgba(0, 0, 255, 0.5); padding:0.25em; margin:1em 0;">
+            <div style="color:black; width: 100%; background-color: rgba(148, 185, 255, 0.4); padding:0.25em; margin:1em 0;">
                 <ol style="display: flex; justify-content: center; list-style-type: none; padding: 0; gap:2em;">
-                    <li><a href="/home" style="text-decoration:none; color:black">Home</a></li>
+                    <li><a href="/home" style="text-decoration:none; color:black;">Home</a></li>
+                    <li><a href="/home" style="text-decoration:none; color:black">|</a></li>
                     <li><a href="/about" style="text-decoration:none; color:black">About Us</a></li>
                 </ol>
             </div>
-            <div style="text-align:center; padding:50px; font-family: Arial, sans-serif; width:fit-content; background-color: rgba(255, 255, 255, 0.2); border-radius: 10px; color: white; font-size: 20px; font-weight: bold;">
+            <div style="text-align:center; padding:50px; font-family: Arial, sans-serif; width:fit-content; background-color: rgba(255, 255, 255, 0.2); border-radius: 10px; color: black; font-size: 20px; font-weight: bold;">
                 <p>Upload a lung X-ray image to get a prediction.</p>
                 <form action="/predict" method="post" enctype="multipart/form-data" style="margin-top:20px; ">
                     <input type="file" name="file" accept="image/*" required style="padding:10px; margin:10px;">
                     <br>
-                    <input type="submit" value="Predict" style="padding:10px 20px; background-color:#28a745; color:white; border:none; cursor:pointer;">
+                    <input type="submit" value="Predict" style="padding:10px 20px; background-color:#28a745; color:black; border:none; cursor:pointer;">
                 </form>
             </div>
         </center>
@@ -150,4 +148,3 @@ def predict():
 # ✅ Run Flask app
 if __name__ == '__main__':
     app.run()
-
