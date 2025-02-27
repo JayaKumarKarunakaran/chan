@@ -130,7 +130,7 @@ def predict():
 
     return f'''
     <head>
-        <title>Lung Cancer Classification</title>
+        <title>Lung Cancer Detection</title>
         <i><center><h1 style="margin: 0.5em;font-size: 3rem ">Lung Cancer Detection Using Machine Learning</h1></center></i>
     </head>
     
@@ -140,6 +140,109 @@ def predict():
     
     <div style="text-align:center; padding:50px; font-family: Arial, sans-serif;">
         <h2 style="color:white;">Predicted Diagnosis: {predicted_label}</h2>
+        
+        '''+('''<h2 style="color: red;">Diagnosis: Malignant</h2>
+
+<h3>DON’T BE STRESSED; FOLLOW OUR TREATMENT TIPS…</h3>
+
+<h4>Dos:</h4>
+<ul>
+    <li>Follow Your Doctor’s Instructions: Always adhere to your oncologist’s advice, whether it's about treatments, medications, or follow-up appointments.</li>
+    <li>Maintain a Healthy Diet: Focus on a balanced diet rich in fruits, vegetables, lean proteins, and whole grains.</li>
+    <li>Stay Hydrated: Drink plenty of fluids, such as water, herbal teas, and clear soups. Staying hydrated helps in managing side effects like dry mouth or constipation.</li>
+    <li>Get Rest: Prioritize good sleep and rest. Fatigue is a common symptom during treatment, so listen to your body and avoid overexertion.</li>
+    <li>Manage Stress: Consider activities like meditation, deep breathing, or mindfulness exercises. Mental health is important, and managing stress can improve overall well-being.</li>
+</ul>
+
+<h4>Don'ts:</h4>
+<ul>
+    <li>Don’t Smoke: Smoking should be completely avoided. It’s crucial to quit, as smoking can worsen lung cancer and impede treatment effectiveness.</li>
+    <li>Avoid Exposure to Pollutants: Stay away from second-hand smoke, industrial chemicals, or other environmental pollutants.</li>
+    <li>Don’t Skip Appointments: Missing treatment sessions, scans, or follow-up appointments can delay treatment progress and increase the risk of recurrence.</li>
+    <li>Don’t Overexert Yourself: Avoid physically demanding activities if you’re feeling fatigued. Too much strain can result in exhaustion or injury.</li>
+    <li>Don’t Self-Medicate: Never take any medications or supplements without consulting your doctor first. Some over-the-counter medications or natural remedies can interfere with cancer treatment.</li>
+</ul>
+
+<h4>General Diet Plans for Lung Cancer Patients:</h4>
+<ul>
+    <li><strong>High-Protein Diet:</strong> Chicken, turkey, fish, eggs, beans, legumes, tofu, low-fat dairy, and lean meats.</li>
+    <li><strong>Balanced Carbohydrates:</strong> Whole grain bread, brown rice, quinoa, oats, sweet potatoes, and whole-wheat pasta.</li>
+    <li><strong>Healthy Fats:</strong> Avocados, olive oil, nuts, seeds, fatty fish (salmon, mackerel), and flaxseeds.</li>
+    <li><strong>Fruits and Vegetables:</strong> Spinach, kale, carrots, berries, oranges, apples, tomatoes, broccoli, cauliflower, and Brussels sprouts.</li>
+    <li><strong>Hydration:</strong> Drink water, herbal teas, and clear soups. Smoothies with fruits, vegetables, and yogurt are also beneficial.</li>
+</ul>
+
+<h4>Naturopathy and Ayurvedic Remedies:</h4>
+<ul>
+    <li><strong>Ashwagandha:</strong> Reduces stress and supports immunity.</li>
+    <li><strong>Turmeric:</strong> Has strong anti-inflammatory properties, helps ease pain, and reduce swelling.</li>
+    <li><strong>Tulsi (Holy Basil):</strong> Clears the lungs and improves breathing.</li>
+    <li><strong>Amla (Indian Gooseberry):</strong> High in Vitamin C and boosts immunity.</li>
+    <li><strong>Ginger:</strong> Helps remove toxins and supports digestion.</li>
+</ul>
+
+<h4>Ayurvedic Therapies:</h4>
+<ul>
+    <li><strong>Panchakarma:</strong> Cleanses toxins from the body, helping patients feel lighter and more energetic.</li>
+    <li><strong>Nasya:</strong> Clears the respiratory system through medicinal oils administered through the nose.</li>
+    <li><strong>Rasayana Therapy:</strong> Boosts immunity and energy, aiding the body's natural defenses.</li>
+</ul>
+
+<h4>Recommended Hospitals in South India:</h4>
+<p>
+    <strong>MGM Cancer Institute</strong>, Chennai - Dr. Dhanasekar Padmanabhan & Dr. Balaji Ramani<br>
+    <strong>VS Hospitals</strong>, Chennai - Prof. Dr. S. Subramanian<br>
+    <strong>Apollo Cancer Institutes</strong>, Chennai - Dr. Vishnu Ramanujan<br>
+    <strong>Fuda Hospital</strong>, Chennai - Dr. Anup Aboti<br>
+    <strong>DCodeCare</strong>, Bengaluru - Dr. Sandeep Nayak's Clinic
+</p>
+
+<p style="font-weight: bold; color: lightgreen;">HOPE YOU FEEL BETTER SOON…</p>
+''' if predicted_label == "Malignant" else '''<head>
+    <title>Lung Cancer Detection Result</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .content {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+        h2 {
+            color: lightgreen;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #007bff;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h2>Diagnosis: Normal</h2>
+        <p>Maintain good health </p>
+        <br>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+''')+'''
         <br><a href="/" style="margin-top:20px; display:inline-block; padding:10px 20px; background-color:#007bff; color:white; text-decoration:none; border-radius:5px;">Go Back</a>
     </div>
     
